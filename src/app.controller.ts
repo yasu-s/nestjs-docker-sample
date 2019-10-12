@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { SystemConfig } from './system.config';
+import { SystemConfig } from './constants/system.config';
 import { AppService } from './app.service';
 
 @Controller()
