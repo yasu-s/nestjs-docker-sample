@@ -4,8 +4,6 @@ FROM node:12
 WORKDIR /usr/src/app
 
 # アプリケーションの依存関係をインストールする
-# ワイルドカードを使用して、package.json と package-lock.json の両方が確実にコピーされるようにします。
-# 可能であれば (npm@5+)
 COPY package*.json ./
 
 RUN npm install
@@ -16,4 +14,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+EXPOSE 3001
+CMD node -r dotenv/config ./node_modules/@nestjs/cli/bin/nest.js start
