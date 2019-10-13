@@ -1,10 +1,17 @@
+function toNumberOrDefault(value: string, defaultValue: number): number {
+  if (value === undefined || value === null) {
+    return defaultValue;
+  }
+  return Number(value);
+}
+
 class SystemConfigData {
   get HOGE() {
-    return process.env.HOGE;
+    return process.env.HOGE || '';
   }
 
   get PORT() {
-    return process.env.PORT ? Number(process.env.PORT) : 3000;
+    return toNumberOrDefault(process.env.PORT, 3000);
   }
 }
 
