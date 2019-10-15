@@ -8,9 +8,6 @@ module.exports = function(options) {
       ...options.resolve,
       plugins: [new TsconfigPathsPlugin()]
     },
-    plugins: [
-      ...options.plugins,
-      new Dotenv(),
-    ]
+    plugins: [ ...options.plugins, new Dotenv() ]
   };
 }
