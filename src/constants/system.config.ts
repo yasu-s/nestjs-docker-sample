@@ -6,13 +6,8 @@ function toNumberOrDefault(value: string, defaultValue: number): number {
 }
 
 class SystemConfigData {
-  get HOGE() {
-    return process.env.HOGE || '';
-  }
-
-  get PORT() {
-    return toNumberOrDefault(process.env.PORT, 3000);
-  }
+  readonly HOGE = process.env.HOGE || '';
+  readonly PORT = toNumberOrDefault(process.env.PORT, 3000);
 }
 
 export const SystemConfig = new SystemConfigData();
