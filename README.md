@@ -4,3 +4,4 @@
 * NestJS
 * Docker
 * dotenv
+* dotenv-webpack

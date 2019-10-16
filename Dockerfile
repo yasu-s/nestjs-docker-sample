@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 3000
 EXPOSE 3001
-CMD node -r dotenv/config ./node_modules/@nestjs/cli/bin/nest.js start --webpack
+CMD ["npm", "run", "start:dev"]
