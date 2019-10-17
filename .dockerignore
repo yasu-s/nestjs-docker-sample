@@ -1,4 +1,8 @@
 node_modules
-npm-debug.log
 .vscode
+.git
+.gitignore
+.env
+Dockerfile
 *.md
+*.log

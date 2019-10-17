@@ -3,16 +3,16 @@ FROM node:12
 # アプリケーションディレクトリを作成する
 WORKDIR /usr/src/app
 
-# アプリケーションの依存関係をインストールする
-COPY package*.json ./
-
-RUN npm install
-# 本番用にコードを作成している場合
-# RUN npm install --only=production
-
 # アプリケーションのソースをバンドルする
 COPY . .
 
+# パッケージインストール
+RUN npm install -g yarn
+RUN yarn install
+
+# ビルド
+RUN yarn build
+
 EXPOSE 3000
 EXPOSE 3001
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "start:prod"]
