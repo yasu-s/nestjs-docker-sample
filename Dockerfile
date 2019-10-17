@@ -4,14 +4,11 @@ FROM node:12
 WORKDIR /usr/src/app
 
 # アプリケーションのソースをバンドルする
-COPY . .
+COPY ./package.json .
+COPY ./dist ./dist
 
 # パッケージインストール
-RUN npm install -g yarn
-RUN yarn install
-
-# ビルド
-RUN yarn build
+RUN npm install --production
 
 EXPOSE 3000
 EXPOSE 3001

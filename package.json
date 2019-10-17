@@ -7,6 +7,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build --webpack",
+    "build:docker": "yarn && yarn build && docker-compose build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start --webpack",
     "start:dev": "nest start --watch --webpack --webpackPath ./webpack.config.dev.js",
