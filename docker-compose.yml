@@ -2,6 +2,7 @@ version: '3'
 
 services:
   api-server:
+    container_name: api-server
     build:
       context: .
       dockerfile: Dockerfile
