@@ -11,7 +11,7 @@
       "port": 9229,
       "runtimeExecutable": "yarn",
       "cwd": "${workspaceFolder}",
-      "runtimeArgs": ["start:debug"],
+      "runtimeArgs": ["start:debug-vs"],
       "console": "integratedTerminal",
       "timeout": 60000,
     },
