@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { Logger } from '@nestjs/common';
+import '@yasu-s/ts-ext';
 
 import { SystemConfig } from '@sample/constants/system.config';
 import { AppModule } from './app.module';

@@ -15,4 +15,10 @@ export class AppController {
   getHoge(): string {
     return SystemConfig.HOGE;
   }
+
+  @Get('sum')
+  getSum(): number {
+    const items = [1, 2, 3];
+    return items.sum();
+  }
 }
